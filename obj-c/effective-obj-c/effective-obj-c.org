@@ -1,0 +1,56 @@
+#+title: Effective Obj-c 学习笔记
+#+author: YaoXiaohui
+
+* Obj-c的语言特性
+** oc特点
+  + oc是c的超集
+  + 区别于其他高级语言，oc使用动态绑定的消息结构，所有的对象类型检查都在运行时确定。O-c拥有运行时环境（runtime）的概念，由其了判断类型。
+    而其他的高级语言，一般由编译器决定，如C++中的多态，在编译期间便通过虚函数表计算出了方法偏移. 怎么做有什么好处?[1]
+** 头文件
+  + 尽量少引入头文件，尽量不要在头文件中引入头文件
+** 作用域
+  + 尽量少用宏
+  + 如果不想让其他类知道的产量，用 static const修饰，如 static const NSTimeInterval kInterval = 0.25f;
+  + 如果要暴露常量，可以在头文件中定义并用extern修饰，在实现文件中赋值 如 extern NSTimeInterval kInterval;(头文件) NSTimeInterval kInterval = 0.25;（实现文件）
+** 枚举
+  + 除了NS_ENUM还有NS_OPTIONS
+  + 在处理枚举的switch语句中，尽量不要加default，这样如果状态罗列不全时，编译器可以报警
+
+* 一些语法糖
+  + NSNumber *float = @1.0f;
+  + NSString *obj1 = arr[0 ];
+  + NSString *obj = dict[@"keyq"];
+  + NSMutableArray *mArr = [@[@1,@2,@3] mutableCopy];
+
+* 对象、消息、运行期
+** 属性
+*** 关键字
+  + @property 语法实际是生成了一个属性(编译器会生成下划线开头的实例变量)的getter和setter方法,如： @property BOOL on;
+  + @synthesize语法可以重新指定编译器生成的实例变量的名字，如：@synthesize on = _on;
+  + @dynamic语法会阻止编译器自动创建实例变量和存取方法，假定这些方法在运行期能够找到
+
+*** 性质修饰符
+  + atomic/nonatomic 原子性，默认是atomic，实际上设置了atomic还是不能保证线程安全,而且atomic的性能很差
+  + readwrite readonly 读写权限控制
+  + 内存管理语义
+    - assign 只针对int float等纯量类型简单赋值操作
+    - strong 表明拥有关系，为其设置新值时步骤为：保留新值->释放旧值->设置新值 （会释放旧值）
+    - weak 表明为拥有关系，为其设置新值时直接赋值。原对象销毁时该值也会清空 （不会释放旧值）
+    - copy 不保留新值，而是copy一份，常用于NSString，或者赋值方是可变对象，防止其发生变化
+    - unsafe_unretained assign语义的对象版本，类似weak，区别是当目标对象销毁时，属性值不清空（所以unsafe，容易泄露）
+*** 存取方法
+  + 获取方法，例： @property (nonatomic, getter=isOn) BOOL on;
+  + 设置方法，例： @property (nonatomic, setter=setOn) BOOL on; setter方法不太常用
+** 属性的读取
+  简单说一句话，在类外访问，一律用属性；在类内访问，设置用属性，读取如果没有延迟初始化直接访问（下划线实例变量），如果有用属性[2]
+  + 在init和dealloc中，统统通过实例变量来访问属性，除非访问不到该实例变量[3]
+** 对象的等同性
+  + 若想检查自定义对象等同性，需提供isEqual方法和hash方法
+  + NSString和容器有自己的等同性方法，可变容器的等同性方法可能会出错（存储方式可能不同）
+
+* 注释
+[1] 在编译时确定对象结构，会导致类重构时需要重新编译。这样很难做到对老库的兼容
+[2] 直接读取实例变量速度快，不需要触发键值观察以及运行时的方法派发步骤；但是问题就是不能保证[[性质修饰符][性质修饰符]]所定义的语义。
+[3] 因为getter和setter可能在子类中重载，在init和dealloc中如果用属性可能会导致调用子类的重载方法，导致报错。但如果实例变量在基类中定义而且子类不可见，则只能访问其属性方法了。
+
+[fn:funtion]

@@ -1,0 +1,37 @@
+# -*- org -*-
+#+title: org-mode 示例
+#+author: YaoXiaohui
+#+STARTUP: Content
+#+todo: todo
+
+<<目录位置>>
+* 列表
+  + 选项1
+  + 选项2
+
+* 表格
+
+#+tableName: 简单表格
+| Name | Value |   SD |
+|------+-------+------|
+| T1   |   1.2 | 0.14 |
+|------+-------+------|
+| T2   |   2.3 | 1.01 |
+
+* STARTED [80%] 超链接
+
+** 网址链接
+[[http://www.gnu.org.software/emacs/][Download and install Emacs]]
+
+** 文件链接
+[[file:c:/windows/desktop.ini][桌面配置文件]]
+
+** 内部链接
+[[目录位置][返回目录]]
+** TODO 其他链接
+
+* 代码块 :@待补充:
+#+BEGIN_SRC Emacs-lisp
+  (setq -default tab-width 4) ; 设置宽度
+#+END_SRC
+

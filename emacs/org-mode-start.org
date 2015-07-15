@@ -1,12 +1,18 @@
+#+title: Org-mode的一些使用方式
+# 这是一行注释
+* 官方给出的demo
+
+[[file://Users/yaoxiaohui/Documents/note/YXHNote/emacs/org-mode-demo.org][官方Org格式Demo]]
 * 介绍
 ** 打开org-mode
 - M-x org-mode
-
+- M-x customize-themes 设置颜色
 ** 标题说明
 1. 用*号来表示标题，一二三级标题对应* ** ***
 2. TAB键可以折叠标题
 3. 项目号用'-','+','*'（前面需要加空格）,'1.','1)'表示
 4. Shift+方向键可以切换项目号类型
+5. 最多10个标题
 
 ** 注脚
 1. 注脚有两种实现方式 [1] 或者 [fn:注释名字]
@@ -18,7 +24,7 @@
 | 2 | two   |
 | 3 | three |
 + 简单说就是输入“|第一列|第二列|”等等，然后按“TAB”会帮你自动对齐
-+ Tab键可以在表格中移动，S+Tab反向移动（S是毛？）
++ Tab键可以在表格中移动，S+Tab反向移动（S是shift键）
 *** 限制列的字数，注意第一行,第二行文字为test，如果移动鼠标上去会显示
 |   | <3> |
 | 1 | test |
@@ -37,7 +43,7 @@
 1. 链接到当前文件内容[[表格][跳转到表格]],  格式为[[][]] 前一个括号内填写链接的字符串key，后一个括号内填写描述
 2. 链接到外部文件 [[file://Users/yaoxiaohui/Documents/note/YXHNote/emacs/link_file.text]] 格式为[[file:目录]] 
 3. C-c C-o或者点击鼠标左键，跳转链接
-
+   
 * 操作命令
 ** 光标移动
 - C-c C-n 移动到下一个标题
