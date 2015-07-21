@@ -1,0 +1,25 @@
+#+title: Todo List
+#+author: yaoxiaohui
+#+SEQ_TODO: REPORT(R@/!) DOING:(T!) |  DONE(D!) FAILED(F!)  SUSPEND(S@/!)
+
+* REPORT 2015年 [/]
+** REPORT 7月 [1/7]
+*** REPORT 21日 [%]
+*** DONE 入门一下org-mode的任务管理                                             :tt:
+    CLOSED: [2015-07-21 Tue 12:15]
+    :LOGBOOK:  
+    - State "DONE"       from "DOING:"     [2015-07-21 Tue 12:15]
+    - State "DOING:"     from "REPORT"     [2015-07-21 Tue 12:15]
+    - State "REPORT"     from ""           [2015-07-21 Tue 12:14] \\
+      reopened again
+    - State "FAILED"     from "DONE"       [2015-07-21 Tue 12:13]
+    - State "DONE"       from "FAILED"     [2015-07-21 Tue 12:13]
+    - State "FAILED"     from "DONE"       [2015-07-21 Tue 12:13]
+    - State "DONE"       from "DOING:"     [2015-07-21 Tue 12:12]
+    - State "DOING:"     from "REPORT"     [2015-07-21 Tue 12:12]
+    :END:      
+*** REPORT Emacs的大块选择、复制、粘贴
+*** REPORT Object-c的对象动态绑定测试
+*** REPORT 用钱包照片上传失败的提示
+*** REPORT 用钱包身份证录入计时统计
+*** REPORT 用钱包其它数据录入需求

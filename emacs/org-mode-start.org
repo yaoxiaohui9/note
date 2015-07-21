@@ -1,8 +1,8 @@
 #+title: Org-mode的一些使用方式
 # 这是一行注释
 * 官方给出的demo
-
 [[file://Users/yaoxiaohui/Documents/note/YXHNote/emacs/org-mode-demo.org][官方Org格式Demo]]
+
 * 介绍
 ** 打开org-mode
 - M-x org-mode
@@ -57,11 +57,38 @@
 - C-c C-e h 导出为 HTML 文件。
 ** 刷新命令
 - C-u C-c C-c 强制计算表格值
-
+- C-c C-t 或者S+-> S+<- 改变任务状态
 * 功能
 ** 关于任务管理，可以参考http://www.cnblogs.com/holbrook/archive/2012/04/14/2447754.html
 以及http://blog.csdn.net/dc_726/article/details/8623879
 
+* 任务管理
+** 任务状态
+*** 内置好的任务状态： TODO和DONE 其他状态需要用户自定义
+*** 自定义任务状态规则
+    + 用关键词"#+SEQ_TODO:"起头，定义一组状态
+    + 状态之间用空格分隔
+    + 可以在状态后用（）添加状态选项，选项类型为：
+      - 字符：该状态的快捷键
+      - !：切换到该状态时会自动增加时间戳
+      - @：切换到该状态时要求输入文字说明
+      - 如果同时设定@和!，使用格式@/!
+    + 用|分隔未完成和已完成状态，未完成状态在查询代办事项时会列出
+*** 自定义任务状态Demo (C-c C-c生效)
+#+SEQ_TODO: REPORT(r!) BUG(b) KNOWNCAUSE(k) | FIXED(f@)
+
+*** 设置任务优先级 S+上下方向键
+
+* 这个任务有3步 (可以用C-c C-c改变子任务状态, M-S-RET增加一个子项目)
+- [X] step1 [2/2]
+  - [X] step1.1
+  - [X] step1.2
+- [ ] step2 [0/1]
+  - [ ] step.2.1
+- [-] step3 [0/0]
+
+
+* 注释
 [1] Come On！
 [fn:注释名字] Go!
 
