@@ -1,11 +1,20 @@
 #+title: Todo List
 #+author: yaoxiaohui
-#+SEQ_TODO: REPORT(R@/!) DOING:(T!) |  DONE(D!) FAILED(F!)  SUSPEND(S@/!)
+#+SEQ_TODO: REPORT(R@/!) DOING:(T!) |  DONE(D!) DONEWITHNOTE(@/!) FAILED(F@/!)  SUSPEND(S@/!)
 
-* REPORT 2015年 [/]
-** REPORT 7月 [1/7]
-*** REPORT 21日 [%]
-*** DONE 入门一下org-mode的任务管理                                             :tt:
+* REPORT 2015年 [0/2]
+** DOING: 7月 [1/2]
+   :LOGBOOK:  
+   - State "DOING:"     from "REPORT"     [2015-07-24 Fri 14:48]
+   :END:      
+*** DONE 第四周 [4/4]
+**** DONE 21日 [100%]
+    CLOSED: [2015-07-24 Fri 12:13]
+    :LOGBOOK:  
+    - State "DONE"       from "DOING:"     [2015-07-24 Fri 12:13]
+    - State "DOING:"     from "REPORT"     [2015-07-24 Fri 12:13]
+    :END:      
+***** DONE 入门一下org-mode的任务管理                                           :tt:
     CLOSED: [2015-07-21 Tue 12:15]
     :LOGBOOK:  
     - State "DONE"       from "DOING:"     [2015-07-21 Tue 12:15]
@@ -18,8 +27,127 @@
     - State "DONE"       from "DOING:"     [2015-07-21 Tue 12:12]
     - State "DOING:"     from "REPORT"     [2015-07-21 Tue 12:12]
     :END:      
-*** REPORT Emacs的大块选择、复制、粘贴
-*** REPORT Object-c的对象动态绑定测试
-*** REPORT 用钱包照片上传失败的提示
-*** REPORT 用钱包身份证录入计时统计
-*** REPORT 用钱包其它数据录入需求
+***** DONE Emacs的大块选择、复制、粘贴
+    CLOSED: [2015-07-21 Tue 14:28]
+    :LOGBOOK:  
+    - State "DONE"       from "DOING:"     [2015-07-21 Tue 14:28]
+    - State "DOING:"     from "REPORT"     [2015-07-21 Tue 14:28]
+    :END:      
+***** DONE Object-c的对象动态绑定测试
+     CLOSED: [2015-07-24 Fri 12:12]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-24 Fri 12:12]
+     - State "DOING:"     from "REPORT"     [2015-07-24 Fri 12:12]
+     :END:      
+***** DONE 用钱宝照片上传失败的提示
+     CLOSED: [2015-07-23 Thu 19:41]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 19:41]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 19:41]
+     - State "DOING:"     from "DONE"       [2015-07-23 Thu 19:41]
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 19:40]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 19:40]
+     :END:      
+***** DONE 用钱宝身份证录入计时统计
+     CLOSED: [2015-07-23 Thu 16:41]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 16:41]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 16:41]
+     :END:      
+***** DONE 用钱包其它数据录入需求
+     CLOSED: [2015-07-23 Thu 16:41]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 16:41]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 16:41]
+     :END:      
+
+**** DONE 23日 观望一下JPush证书到期的事情
+     CLOSED: [2015-07-23 Thu 10:39]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 10:39]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 10:39]
+     :END:      
+**** DONE 23日 [100%]
+    CLOSED: [2015-07-23 Thu 19:43]
+    :LOGBOOK:  
+    - State "DONE"       from "DOING:"     [2015-07-23 Thu 19:43]
+    - State "DOING:"     from "REPORT"     [2015-07-23 Thu 19:43]
+    :END:      
+***** DONEWITHNOTE 证书过期的事情
+     CLOSED: [2015-07-23 Thu 10:38]
+     :LOGBOOK:  
+     - State "DONEWITHNOTE" from "DONE"       [2015-07-23 Thu 11:15] \\
+       经过排查，证书自动过期了
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 10:38]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 10:38]
+     :END:      
+***** DONEWITHNOTE 来一贷Crash的问题
+     CLOSED: [2015-07-23 Thu 14:50]
+     :LOGBOOK:  
+     - State "DONEWITHNOTE" from "DONE"       [2015-07-23 Thu 14:50] \\
+       经排查，此问题是因为后台的包同步逻辑导致的。后台起了crontab来吧包定期分发到各个机器上。
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 14:50]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 14:50]
+     :END:      
+***** DONE 用钱宝身份认证页面，下载UI需要优化，图片缓冲需要优化
+     CLOSED: [2015-07-23 Thu 19:40]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-23 Thu 19:40]
+     - State "DOING:"     from "REPORT"     [2015-07-23 Thu 16:44]
+     :END:      
+**** SUSPEND 24日 [100%]
+    CLOSED: [2015-07-24 Fri 16:39]
+    :LOGBOOK:  
+    - State "DONE"       from "DOING:"     [2015-07-24 Fri 16:39]
+    - State "DOING:"     from "REPORT"     [2015-07-24 Fri 16:39]
+    :END:      
+***** DONE 更新用钱宝小版本
+     CLOSED: [2015-07-24 Fri 11:23]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-24 Fri 11:23]
+     - State "DOING:"     from "REPORT"     [2015-07-24 Fri 11:23]
+     :END:      
+***** SUSPEND appstore证书
+     CLOSED: [2015-07-24 Fri 16:38]
+     :LOGBOOK:  
+     - State "SUSPEND"    from "FAILED"     [2015-07-24 Fri 16:38] \\
+       暂时先不搞这个case，比较麻烦，待app稳定且推广时再跟进
+     - State "DONE"       from "DOING:"     [2015-07-24 Fri 16:38]
+     - State "DOING:"     from "REPORT"     [2015-07-24 Fri 16:38]
+     :END:      
+***** DONE 整理对象运行时笔记
+     CLOSED: [2015-07-24 Fri 16:25]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-24 Fri 16:25]
+     - State "DOING:"     from "REPORT"     [2015-07-24 Fri 16:25]
+     :END:       
+**** DONEWITHNOTE 数据库迁移测试
+    CLOSED: [2015-07-24 Fri 17:08]
+    :LOGBOOK:  
+    - State "DONEWITHNOTE" from "DONE"       [2015-07-24 Fri 17:08] \\
+      OK,没有问题，之前是因为数据库版本没有设置
+    - State "DONE"       from "DOING:"     [2015-07-24 Fri 17:08]
+    - State "DOING:"     from "REPORT"     [2015-07-24 Fri 17:08]
+    :END:      
+*** REPORT 第五周 [1/2]
+**** REPORT 27日 [100%]
+***** DONE 带衣服、纸巾
+     CLOSED: [2015-07-27 Mon 11:06]
+     :LOGBOOK:  
+     - State "DONE"       from "DOING:"     [2015-07-27 Mon 11:06]
+     - State "DOING:"     from "REPORT"     [2015-07-27 Mon 11:06]
+     :END:      
+**** DONEWITHNOTE 检查信用卡还款情况
+     CLOSED: [2015-07-27 Mon 11:06]
+     :LOGBOOK:  
+     - State "DONEWITHNOTE" from "DONE"       [2015-07-27 Mon 11:06] \\
+       还完了
+     - State "DONE"       from "DOING:"     [2015-07-27 Mon 11:06]
+     - State "DOING:"     from "REPORT"     [2015-07-27 Mon 11:06]
+     :END:      
+
+**** REPORT 28日 [%]
+***** REPORT 交燃气费
+**** REPORT 认证页面优化
+**** REPORT 通讯录授权页面优化
+**** REPORT 相册数据收集
